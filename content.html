@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan Khan | AWS Cloud & AI/ML Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav-container container">
+            <a href="index.html" class="logo">Rehan Khan</a>
+            <nav>
+                <div class="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="content.html" class="active">Content</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <section class="content-hero" style="background-image: linear-gradient(rgba(0, 77, 64, 0.85), rgba(0, 77, 64, 0.9)), url('img/p1.jpg');">
+        <div class="container hero-content-text">
+            <h1>Insights & Technical Notes</h1>
+            <p>Exploring the frontiers of Cloud Architecture, MLOps, Artificial Intelligence, and scalable Python development. Sharing practical knowledge for modern engineers.</p>
+        </div>
+    </section>
+
+    <section class="content-body">
+        <div class="container">
+            
+            <div class="filter-bar content-filter-bar">
+                <button class="filter-btn active" data-filter="all">Latest Posts</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & Architecture</button>
+                <button class="filter-btn" data-filter="mlops">AI & MLOps</button>
+                <button class="filter-btn" data-filter="python">Python & Dev</button>
+            </div>
+
+            <div class="featured-article-card article-card" data-category="mlops">
+                <div class="featured-img-wrapper img-placeholder">
+                     <img src="img/p3.png" alt="MLOps Pipeline">
+                     <span class="category-badge">MLOps Focus</span>
+                </div>
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar-alt"></i> Oct 20, 2025</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <h2>Building Resilient MLOps Pipelines on AWS</h2>
+                    <p>A deep dive into orchestrating reproducible machine learning workflows using AWS SageMaker Pipelines, Step Functions, and GitHub Actions for true CI/CD in AI.</p>
+                    <a href="#" class="btn btn-primary">Read Full Article</a>
+                </div>
+            </div>
+
+            <div class="grid-3 article-grid">
+
+                <div class="card article-card standard-card" data-category="cloud">
+                    <div class="article-thumbnail img-placeholder">
+                        <span class="category-badge">Cloud Arch</span>
+                         <p style="text-align: center; padding-top: 60px;">[S3 Data Lake Img]</p>
+                    </div>
+                    <div class="article-info">
+                        <div class="article-date">Sep 15, 2025</div>
+                        <h4>AWS S3 Data Lake Architecture for Beginners</h4>
+                        <p>Structuring affordable, scalable data lakes using S3, Glue, and Athena. A practical guide to decoupling storage from compute.</p>
+                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card article-card standard-card" data-category="python">
+                    <div class="article-thumbnail img-placeholder">
+                        <span class="category-badge">Python & AI</span>
+                        <p style="text-align: center; padding-top: 60px;">[Python Async Img]</p>
+                    </div>
+                    <div class="article-info">
+                        <div class="article-date">Aug 28, 2025</div>
+                        <h4>Supercharging Python AI APIs with FastAPI & AsyncIO</h4>
+                        <p>Moving beyond Flask: How to handle concurrent ML model requests efficiently using modern asynchronous Python.</p>
+                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card article-card standard-card" data-category="mlops">
+                    <div class="article-thumbnail img-placeholder">
+                        <span class="category-badge">ML Security</span>
+                        <p style="text-align: center; padding-top: 60px;">[IAM for ML Img]</p>
+                    </div>
+                    <div class="article-info">
+                        <div class="article-date">Aug 10, 2025</div>
+                        <h4>Securing Machine Learning Workloads on AWS</h4>
+                        <p>Best practices for managing IAM roles for SageMaker and securing S3 buckets containing sensitive training data.</p>
+                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="card article-card standard-card" data-category="cloud">
+                    <div class="article-thumbnail img-placeholder" style="background: #eee;">
+                        <span class="category-badge note-badge">Tech Note</span>
+                         <i class="fas fa-terminal" style="font-size: 3em; color: #ccc; display: block; text-align: center; padding-top: 50px;"></i>
+                    </div>
+                    <div class="article-info">
+                        <div class="article-date">Jul 22, 2025</div>
+                        <h4>Quick Tip: Debugging Lambda Cold Starts with X-Ray</h4>
+                        <p>A quick technical note on configuring AWS X-Ray to pinpoint initialization bottlenecks in serverless functions.</p>
+                        <a href="#" class="read-more-link">Read Note <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                 <div class="card article-card standard-card" data-category="mlops">
+                    <div class="article-thumbnail img-placeholder">
+                        <span class="category-badge">AI Models</span>
+                        <p style="text-align: center; padding-top: 60px;">[LLM Fine-Tuning Img]</p>
+                    </div>
+                    <div class="article-info">
+                        <div class="article-date">Jun 15, 2025</div>
+                        <h4>Fine-Tuning Open Source LLMs on EC2</h4>
+                        <p>Practical guide to deploying a g5.xlarge instance to fine-tune LLaMA models using LoRA adapters.</p>
+                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div> </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container newsletter-box">
+            <div class="newsletter-text">
+                <h3>📩 Stay Updated</h3>
+                <p>Get the latest technical notes on Cloud & AI engineering delivered straight to your inbox. No spam, just code and architecture.</p>
+            </div>
+            <form class="newsletter-form" onsubmit="alert('Newsletter signup placeholder active.'); return false;">
+                <input type="email" placeholder="Enter your email address..." required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo">Rehan Khan</a>
+                <p class="footer-desc">
+                    AWS Cloud Architect & Machine Learning Engineer. Building scalable, intelligent solutions for the modern web.
+                </p>
+                <div class="footer-socials">
+                    <a href="mailto:rehankhanbjr523@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href=" linkedin.com/in/rehankhan088" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href=" github.com/rehankhan88" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Expertise</h4>
+                <ul>
+                    <li><a href="projects.html">AWS Architecture</a></li>
+                    <li><a href="projects.html">Machine Learning</a></li>
+                    <li><a href="projects.html">DevOps Automation</a></li>
+                    <li><a href="projects.html">Python Development</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2025</span> Rehan Khan. All Rights Reserved.</p>
+            <button id="backToTop" class="back-to-top-btn" title="Go to top">
+                Top <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script> 
+</body>
+</html>
