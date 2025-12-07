@@ -1,39 +1,33 @@
-version: "3.8"
+version: '3.8'
+
 services:
-  mongodb:
-    container_name: mongo-service
-    image: mongo:latest
+  # The Jenkins CI/CD Server
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins_portfolio_cicd
+    user: root
+    privileged: true
+    ports:
+      - "8080:8080"   # Access Jenkins Dashboard here
+      - "50000:50000" # For Jenkins agents
     volumes:
-      - ./backend/data:/data
-    ports:
-      - "27017:27017"
-
-  backend:
-    container_name: backend
-    build: ./backend
-    env_file:
-      - ./backend/.env.docker
-    ports:
-      - "31100:8080"
-    depends_on:
-      - mongodb
-
-  frontend:
-    container_name: frontend
-    build: ./frontend
-    env_file:
-      - ./frontend/.env.docker
-    ports:
-      - "5173:5173"
-
-  redis:
-    container_name: redis-service
+      - jenkins_home:/var/jenkins_home
+      # Mount the host Docker socket to allow Jenkins to run Docker commands
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - ci-network
     restart: unless-stopped
-    image: redis:7.0.5-alpine 
-    expose:
-        - 6379
-    depends_on:
-      - mongodb
+
+  # (Optional) You can run the portfolio directly here, 
+  # but usually, Jenkins will spin this up dynamically.
+  # portfolio-site:
+  #   build: .
+  #   ports:
+  #     - "80:80"
 
 volumes:
-  data:
+  jenkins_home:
+
+networks:
+  ci-network:
+    driver: bridge
